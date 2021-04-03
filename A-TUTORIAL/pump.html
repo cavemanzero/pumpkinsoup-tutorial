@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+ 
+ 
+  <div class = "header">
+    <h1>Hello</h1>
+    <button onclick = "location.href = 'https://pajamx.com/'">
+        GO BACK
+    </button> 
+  </div>
+
+<!--INTRODUCTION-->
+<body>
+    <div class= "content">
+        <h1>HOW TO MAKE GOODASS PUMPKIN SOUP</h1>
+        <div class = "grid-container-main">
+            <div class = "grid-container2">
+                <img src="img/finalstep.png">
+                <div>
+                    This is a good pumpkin soup that my friend showed me how to make. It was the best thing ever. It's a great way for you to get rid of 3 small kabocha squashes that will go bad if you don't use it. We don't want moldy food okay.
+                </div>
+             </div>
+        </div>
+    </div>
+</body>
+
+
+<!--INGREDIENTS-->
+<body>
+    <div class="content">
+        <h1>WHAT YOU'LL NEED</h1>
+    </div>
+    <div class = "grid-container-main">
+        <div id="ingredients" class = "ingredients"></div>
+    </div>
+    
+</body>
+
+
+    <!--CSM SHEET-->
+<div class="grid-container-main">
+    <script src="https://cdn.jsdelivr.net/npm/tabletop@1.6.2/src/tabletop.min.js"></script>
+    <script type="text/javascript">
+        function init() {
+            Tabletop.init( {
+                key: 'https://docs.google.com/spreadsheets/d/1vZHclyEoJG9lL2aqur0zKoXU5iRxAKN-1XQ00Qkux7w/edit?usp=sharing',
+                simpleSheet: true 
+            } ).then(function(data, tabletop) { 
+                console.log(data); 
+            
+                let html = "";
+                data.forEach( item => {
+                    html += "" +
+                            "<div class='ingredients'>" +
+                                "<img src='" + item.img + "'/>" +
+                                "<p>" + item.ingredient + "</p>" + 
+                            "</div>" +
+                    "";
+                });
+                document.getElementById("ingredients").innerHTML = html;
+            })
+        }
+        window.addEventListener('DOMContentLoaded', init)
+    </script>
+</div>
+
+<!--THE STEPS-->
+<body>
+    <div class="content">
+        <h1>THE STEPS</h1>
+    </div>
+    <div class = "grid-container-main">
+        <div id="grid-container-main"></div>
+    </div>
+    </div>
+</body>
+
+
+    <!--CSM SHEET-->
+    <script src="https://cdn.jsdelivr.net/npm/tabletop@1.6.2/src/tabletop.min.js"></script>
+    <script type="text/javascript">
+        function init() {
+            Tabletop.init( {
+                key: 'https://docs.google.com/spreadsheets/d/1vZHclyEoJG9lL2aqur0zKoXU5iRxAKN-1XQ00Qkux7w/edit?usp=sharing',
+                simpleSheet: true 
+            } ).then(function(data, tabletop) { 
+                console.log(data); 
+            
+                let html = "";
+                data.forEach( item => {
+
+                    html += "" +
+                        "<h2>" + "Step " + item.step + "</h2>" +
+                            "<div class='grid-container2'>" +
+                                "<img src='" + item.pic + "'/>" +
+                                "<div>" + item.description + "</div>" + 
+                            "</div>" +
+                        "</div>" +
+                    "";
+                });
+                document.getElementById("grid-container-main").innerHTML = html;
+            })
+        }
+        window.addEventListener('DOMContentLoaded', init)
+    </script>
+
+<body>
+    <div class="content">
+        <h1>END.</h1>
+    </div>
+    <div class = "grid-container-main">
+        <div class = "grid-container2">
+            <img src="img/finalstep.png">
+        </div>
+        <p>The final result should look something like this. I had mine with pandesal. I recommend it.</p>
+    </div>
+</body>
+
+<body>
+    <div class="content">
+        <h1>HELPFUL VIDEO.</h1>
+    </div>
+    <div class = "grid-container-main">
+        <div class = "grid-container2">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hEBCuhe7LSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        </div>
+        <p>Here is a video on how to cut kabocha squashes.</p>
+    </div>
+</body>
+
+<body>
+    <div class="content">
+        <h1>Other things.</h1>
+    <div class = "grid-container-main">
+        <div class = "grid-container2">
+            <img src="img/code snippet.png">
+        </div>
+        <p>Also here is how I did these frames I used for this tutorial.</p>
+    </div>
+</body>
+
+</html>
